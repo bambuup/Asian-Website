@@ -1,7 +1,6 @@
 import React from 'react';
 import { PlayCircle } from 'lucide-react';
 import SplitText from '../TextAnimations/SplitText/SplitText';
-import DecryptedText from '../TextAnimations/DecryptedText/DecryptedText';
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
@@ -31,20 +30,34 @@ const Hero: React.FC = () => {
       <div className="relative z-20 h-full flex items-center">
         <div className="container mx-auto px-4 md:px-6 py-24">
           <div className="max-w-3xl">
-            <h1 className="mb-4"><SplitText
-              text="Your Business Growth Partner in Australia"
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-              delay={50}
-              animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-              animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+            <h1 className="mb-4 text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <SplitText
+                text="Your Growth Partner Across"
+                className=""
+                delay={50}
+                animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                threshold={0.2}
+                rootMargin="-50px"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
 
-              threshold={0.2}
-              rootMargin="-50px"
-              onLetterAnimationComplete={handleAnimationComplete}>
-            </SplitText></h1>
+              <span className="bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text text-transparent">
+                Vietnam
+              </span>
+              {' & '}
+              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
+                Australia
+              </span>
+              {/* {' & '}
+              <span className="bg-gradient-to-r from-blue-500 to-red-800 bg-clip-text text-transparent">
+                New Zealand
+              </span> */}
+            </h1>
+
 
             <SplitText
-              text="Comprehensive market entry strategies, business development, and advisory services to help your business thrive in the Australian market."
+              text="Your trusted partner for business success in Vietnam and Australia from market entry to expansion and beyond."
               className="text-xl md:text-2xl text-gray-200 mb-8 text-left mt-2 mb-5"
               delay={20}
               animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
@@ -79,7 +92,7 @@ const Hero: React.FC = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

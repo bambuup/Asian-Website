@@ -1,17 +1,15 @@
 import React from 'react';
-import ImpactSection from '../components/ImpactSection';
-import TeamSection from '../components/TeamSection';
+import InputSection from '../components/InputSection';
 import { Helmet } from 'react-helmet';
 
 const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Page | BambuUP</title>
+        <title>Get Updates Page | BambuUP</title>
       </Helmet>
       <div>
-        <TeamSection />
-        <ImpactSection />
+        <InputSection />
       </div>
     </>
   );

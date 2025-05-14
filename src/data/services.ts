@@ -63,7 +63,7 @@ export const services: Service[] = [
       {
         id: 'meeting-arrangement',
         title: 'Meeting Arrangement',
-        description: 'Online/Onsite in Australia with potential partners'
+        description: 'Online/Onsite in Australia & New Zealand'
       },
       {
         id: 'negotiation',
@@ -83,5 +83,17 @@ export const services: Service[] = [
         description: 'Comprehensive business guidance from inception to execution'
       }
     ]
-  }
+  },
+  {
+    id: 'trade-mission',
+    title: 'Trade Mission',
+    description: 'Facilitating international business connections and market exploration.',
+    items: [
+      {
+        id: 'mission',
+        title: 'Organizing Trade Missions (e.g., Trade Mission to Vietnam)',
+        description: 'To connect with potential partners, explore market opportunities, and expand business networks'
+      }
+    ]
+  },
 ];

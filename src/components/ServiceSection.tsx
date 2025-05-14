@@ -22,9 +22,9 @@ const ServiceSection: React.FC = () => {
             rootMargin="-50px"
             onLetterAnimationComplete={handleAnimationComplete}>
           </SplitText></h2>
-          <div className="w-20 h-1 bg-primary-400 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-primary-400 mx-auto mb-6 mt-2"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive business services tailored to help your company successfully enter and thrive in the Australian market.
+            Comprehensive business services tailored to help your company successfully enter and thrive in the Australian & New Zealand market.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ const ServiceSection: React.FC = () => {
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:translate-y-[-5px]"
             >
               <div className="p-6 md:p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-semibold bg-gradient-to-r from-green-500 to-green-900 bg-clip-text text-transparent mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
 
                 <ul className="space-y-4 mb-6">

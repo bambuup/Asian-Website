@@ -81,10 +81,10 @@ const Header: React.FC = () => {
 
             </nav>
             <Link
-              to="/login"
-              className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md font-medium transition-colors"
+              to=""
+              className="bg-primary-500 hover:bg-primary-700 text-white px-5 py-2 rounded-md font-medium transition-colors"
             >
-              Login
+              Book now
             </Link>
           </div>
 
@@ -155,15 +155,15 @@ const Header: React.FC = () => {
             >
               Contact
             </Link>
-            {/* <div className="pt-2">
+            <div className="pt-2">
               <Link
-                to="/login"
+                to=""
                 className="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md font-medium transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Login
+                Book now
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
       )}

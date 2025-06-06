@@ -1,6 +1,5 @@
 import React from 'react';
 import ImpactSection from '../components/ImpactSection';
-import TeamSection from '../components/TeamSection';
 import { Helmet } from 'react-helmet';
 
 const About: React.FC = () => {
@@ -10,7 +9,6 @@ const About: React.FC = () => {
         <title>About Page | BambuUP</title>
       </Helmet>
       <div>
-        <TeamSection />
         <ImpactSection />
       </div>
     </>

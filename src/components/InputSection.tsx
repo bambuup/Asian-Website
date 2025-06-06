@@ -1,7 +1,7 @@
 import React from 'react';
 const InputSection: React.FC = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-green-600/50">
       <div className="container mx-auto px-6">
         <iframe
           src="https://airtable.com/embed/app96ANvvi7d0xAOu/pagT3H57JAvDZZka2/form"

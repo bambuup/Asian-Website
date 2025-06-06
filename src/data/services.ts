@@ -1,99 +1,287 @@
-import { Service } from '../types';
+export interface PricingInfo {
+  setupFee?: string;
+  monthlyRetainer?: string;
+  perDeliverable?: string;
+  note?: string;
+}
+
+export interface ServiceItem {
+  id: string;
+  title: string;
+  description: string;
+  pricing?: {
+    type?: string;
+    fee?: string;
+    deliverables?: string;
+    note?: string;
+  };
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  direction: 'vn-to-au' | 'au-to-vn';
+  items: ServiceItem[];
+  pricing?: PricingInfo;
+}
 
 export const services: Service[] = [
   {
-    id: 'market-research',
+    id: 'vn-market-research',
     title: 'Market Research & Entry Strategy',
-    description: 'Comprehensive market analysis and strategic planning for your business expansion.',
+    direction: 'vn-to-au',
+    description: 'Comprehensive market research and entry strategy consulting for Vietnamese businesses.',
     items: [
       {
-        id: 'preliminary-research',
-        title: 'Preliminary Market Research',
-        description: 'Industry Trends, Customer Insights'
-      },
-      {
-        id: 'competitive-analysis',
-        title: 'Competitive Analysis',
-        description: 'Detailed analysis of market competitors, strengths and opportunities'
+        id: 'market-research',
+        title: 'Market Research',
+        description: 'Market research (desk research + 1-2 expert interview for Industry trends, customer insights, competitive analysis, etc.)'
       },
       {
         id: 'entry-strategy',
         title: 'Entry Strategy Consulting',
-        description: 'Entry Models, Go-to-Market Plan'
+        description: 'Entry strategy consulting (Entry models, Go-to-market plan)'
       }
     ]
   },
   {
-    id: 'trade-representation',
-    title: 'Trade Representation & Sales Development',
-    description: 'Professional representation and sales strategy to establish your business presence.',
+    id: 'vn-business-matching',
+    title: 'Ad-hoc Business Matching',
+    direction: 'vn-to-au',
+    description: 'On-demand business connection services.',
     items: [
       {
-        id: 'trade-fairs',
-        title: 'Representation at Trade Fairs & Networking Events',
-        description: 'Professional representation at key industry events'
-      },
-      {
-        id: 'profile-design',
-        title: 'Profile Design in Australia',
-        description: 'Creating compelling business profiles tailored to Australian market'
-      },
-      {
-        id: 'client-sourcing',
-        title: 'B2B/B2C Client Sourcing Support',
-        description: 'Identifying and connecting with potential clients'
+        id: 'business-connections',
+        title: 'Business Connections',
+        description: 'On-demand connection with specific businesses or organizations based on client request'
       }
     ]
   },
   {
-    id: 'business-matching',
-    title: 'Business Matching & Partnership Development',
-    description: 'Connect with ideal partners and establish valuable business relationships.',
+    id: 'vn-marketing-materials',
+    title: 'Sales & MKT Materials Development',
+    direction: 'vn-to-au',
+    description: 'Development of marketing and sales materials.',
     items: [
       {
-        id: 'identify-partners',
-        title: 'Identifying Potential Partners',
-        description: 'Discovering the right business partners for your expansion'
+        id: 'materials-dev',
+        title: 'Marketing Materials',
+        description: 'MKT/ Sales kit/ Pitch deck development'
+      }
+    ]
+  },
+  {
+    id: 'vn-company-setup',
+    title: 'Company Set-up Support',
+    direction: 'vn-to-au',
+    description: 'Complete assistance with company establishment.',
+    items: [
+      {
+        id: 'legal-setup',
+        title: 'Company Setup',
+        description: 'Support with legal entity registration, tax setup, local director, office space'
+      }
+    ]
+  },
+  {
+    id: 'vn-business-development',
+    title: 'Business & Partnership Development Service/ Commercial Representative Service',
+    direction: 'vn-to-au',
+    description: 'Comprehensive business development and partnership services.',
+    items: [
+      {
+        id: 'partner-identification',
+        title: 'Partner Identification',
+        description: 'Identifying potential partners'
       },
       {
         id: 'screening',
         title: 'Screening & Due Diligence',
-        description: 'Thorough evaluation of potential business partners'
+        description: 'Screening & due diligence'
       },
       {
         id: 'meeting-arrangement',
         title: 'Meeting Arrangement',
-        description: 'Online/Onsite in Australia & New Zealand'
+        description: 'Meeting arrangement (Online/onsite in Australia & New Zealand)'
       },
       {
         id: 'negotiation',
-        title: 'Preliminary Negotiation Support',
-        description: 'Expert guidance during initial partnership discussions'
+        title: 'Negotiation Support',
+        description: 'Preliminary negotiation support'
       }
     ]
   },
   {
-    id: 'business-advisory',
+    id: 'vn-business-advisory',
     title: 'Business Advisory',
-    description: 'Expert guidance and consulting for all aspects of your business operations.',
+    direction: 'vn-to-au',
+    description: 'End-to-end business advisory services.',
     items: [
       {
-        id: 'end-to-end',
-        title: 'End-to-End Business Advisory',
-        description: 'Comprehensive business guidance from inception to execution'
+        id: 'advisory',
+        title: 'Business Advisory',
+        description: 'End-to-End business advisory (Business structure, operation, finance, R&D, marketing, etc.)'
       }
     ]
   },
   {
-    id: 'trade-mission',
-    title: 'Trade Mission',
-    description: 'Facilitating international business connections and market exploration.',
+    id: 'vn-investor-sourcing',
+    title: 'Investor Sourcing & Fundraising Support',
+    direction: 'vn-to-au',
+    description: 'Comprehensive investment and fundraising services.',
     items: [
       {
-        id: 'mission',
-        title: 'Organizing Trade Missions (e.g., Trade Mission to Vietnam)',
-        description: 'To connect with potential partners, explore market opportunities, and expand business networks'
+        id: 'sell-side',
+        title: 'Sell-side services',
+        description: `- Identify potential investors
+- Coordinate fundraising
+- Pitch preparation support
+- Term sheet support`
+      },
+      {
+        id: 'buy-side',
+        title: 'Buy-side services',
+        description: 'Investment sourcing, initial screening, support with negotiation'
       }
     ]
   },
+  {
+    id: 'vn-trade-mission',
+    title: 'Trade Mission',
+    direction: 'vn-to-au',
+    description: 'Trade mission organization and support.',
+    items: [
+      {
+        id: 'trade-mission',
+        title: 'Trade Mission',
+        description: 'Organizing Trade Missions (e.g., Trade Mission to Australia)'
+      }
+    ]
+  },
+  // Australia to Vietnam Services
+  {
+    id: 'au-market-research',
+    title: 'Market Research & Entry Strategy',
+    direction: 'au-to-vn',
+    description: 'Market research and entry strategy consulting for Australian businesses.',
+    items: [
+      {
+        id: 'au-market-research',
+        title: 'Market Research',
+        description: 'Market research (industry trends, customer insights, competitive analysis, etc.)'
+      },
+      {
+        id: 'au-entry-strategy',
+        title: 'Entry Strategy Consulting',
+        description: 'Entry strategy consulting (entry models, Go-to-market plan)'
+      }
+    ]
+  },
+  {
+    id: 'au-trade-representation',
+    title: 'Trade Representation & Sales Development',
+    direction: 'au-to-vn',
+    description: 'Professional representation and sales development services.',
+    items: [
+      {
+        id: 'trade-fairs',
+        title: 'Trade Fair Representation',
+        description: 'Representation at Trade Fairs & Networking Events'
+      },
+      {
+        id: 'profile-localization',
+        title: 'Profile Localization',
+        description: 'Profile localization in Vietnam'
+      }
+    ]
+  },
+  {
+    id: 'au-company-setup',
+    title: 'Company Set-up Support',
+    direction: 'au-to-vn',
+    description: 'Complete assistance with company establishment.',
+    items: [
+      {
+        id: 'au-legal-setup',
+        title: 'Company Setup',
+        description: 'Support with legal entity registration, tax setup, local director, office space'
+      }
+    ]
+  },
+  {
+    id: 'au-business-matching',
+    title: 'Business Matching & Partnership Development',
+    direction: 'au-to-vn',
+    description: 'Comprehensive business matching and partnership services.',
+    items: [
+      {
+        id: 'au-partner-identification',
+        title: 'Partner Identification',
+        description: 'Identifying potential partners'
+      },
+      {
+        id: 'au-screening',
+        title: 'Screening & Due Diligence',
+        description: 'Screening & due diligence'
+      },
+      {
+        id: 'au-meeting-arrangement',
+        title: 'Meeting Arrangement',
+        description: 'Meeting arrangement (online/onsite)'
+      },
+      {
+        id: 'au-negotiation',
+        title: 'Negotiation Support',
+        description: 'Preliminary negotiation support'
+      }
+    ]
+  },
+  {
+    id: 'au-business-advisory',
+    title: 'Business Advisory',
+    direction: 'au-to-vn',
+    description: 'End-to-end business advisory services.',
+    items: [
+      {
+        id: 'au-advisory',
+        title: 'Business Advisory',
+        description: 'End-to-end business advisory (Business structure, operation, finance, R&D, marketing, legal, etc.)'
+      }
+    ]
+  },
+  {
+    id: 'au-investor-sourcing',
+    title: 'Investor Sourcing & Fundraising Support',
+    direction: 'au-to-vn',
+    description: 'Comprehensive investment and fundraising services.',
+    items: [
+      {
+        id: 'au-sell-side',
+        title: 'Sell-side services',
+        description: `- Identify potential investors
+- Coordinate fundraising
+- Pitch preparation support
+- Term sheet support`
+      },
+      {
+        id: 'au-buy-side',
+        title: 'Buy-side services',
+        description: 'Investment sourcing, initial screening, support with negotiation'
+      }
+    ]
+  },
+  {
+    id: 'au-trade-mission',
+    title: 'Trade Mission',
+    direction: 'au-to-vn',
+    description: 'Trade mission organization and support.',
+    items: [
+      {
+        id: 'au-trade-mission',
+        title: 'Trade Mission',
+        description: 'Organizing Trade Missions to Vietnam'
+      }
+    ]
+  }
 ];

@@ -16,7 +16,7 @@ const CTASection: React.FC = () => {
         {Array.from({ length: 12 }).map((_, i) => (
           <div
             key={i}
-            className="absolute h-full w-[5px] bg-green-300 transform rotate-12"
+            className="absolute h-full w-[5px] bg-[#bee952] transform rotate-12"
             style={{ left: `${i * 10 + 20}%` }}
           />
         ))}
@@ -75,7 +75,7 @@ const CTASection: React.FC = () => {
               >
                 <motion.a
                   href="/book"
-                  className="group px-8 py-4 bg-green-600 text-white rounded-full text-lg font-medium transition-all duration-300 flex items-center justify-center hover:bg-green-700 shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30 hover:scale-105"
+                  className="group px-8 py-4 bg-[#91BE1F] hover:bg-[#7ea81a] text-white rounded-full text-lg font-medium transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-green-500/20 hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

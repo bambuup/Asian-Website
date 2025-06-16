@@ -68,7 +68,7 @@ const ServiceSection: React.FC = () => {
             </h2>
           </div>
 
-          <div className="w-32 h-1.5 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 mx-auto mb-8 mt-4 rounded-full"></div>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-[#d3ed8f] via-[#91BE1F] to-[#7ea81a] mx-auto mb-8 mt-4 rounded-full"></div>
 
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
             Tailored solutions to help companies succeed in cross-border expansion between Vietnam and Australia.
@@ -79,8 +79,8 @@ const ServiceSection: React.FC = () => {
             <button
               onClick={() => setActiveDirection('vn-to-au')}
               className={`group relative px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 overflow-hidden ${activeDirection === 'vn-to-au'
-                ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg shadow-green-600/20 scale-105'
-                : 'bg-white text-gray-700 hover:text-green-700 hover:shadow-lg border border-gray-200'
+                ? 'bg-gradient-to-r from-[#91BE1F] to-[#7ea81a] text-white shadow-lg shadow-green-600/20 scale-105'
+                : 'bg-white text-gray-700 hover:text-[#91BE1F] hover:shadow-lg border border-gray-200'
                 }`}
             >
               {activeDirection === 'vn-to-au' && (
@@ -95,8 +95,8 @@ const ServiceSection: React.FC = () => {
             <button
               onClick={() => setActiveDirection('au-to-vn')}
               className={`group relative px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 overflow-hidden ${activeDirection === 'au-to-vn'
-                ? 'bg-gradient-to-r from-emerald-600 to-green-600 text-white shadow-lg shadow-green-600/20 scale-105'
-                : 'bg-white text-gray-700 hover:text-green-700 hover:shadow-lg border border-gray-200'
+                ? 'bg-gradient-to-r from-[#91BE1F] to-[#7ea81a] text-white shadow-lg shadow-green-600/20 scale-105'
+                : 'bg-white text-gray-700 hover:text-[#91BE1F] hover:shadow-lg border border-gray-200'
                 }`}
             >
               {activeDirection === 'au-to-vn' && (
@@ -116,7 +116,7 @@ const ServiceSection: React.FC = () => {
             <div
               key={service.id}
               className={`group bg-white/90 backdrop-blur-xl rounded-2xl overflow-hidden transition-all duration-500 ${hoveredService === service.id
-                ? 'ring-2 ring-green-400/50 shadow-xl shadow-green-600/10 transform scale-[1.02]'
+                ? 'ring-2 ring-[#91BE1F]/50 shadow-xl shadow-green-600/10 transform scale-[1.02]'
                 : 'shadow-lg hover:shadow-xl hover:shadow-green-600/10'
                 }`}
               onMouseEnter={() => setHoveredService(service.id)}
@@ -124,23 +124,23 @@ const ServiceSection: React.FC = () => {
             >
               <div className="relative p-6 md:p-8">
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-600 to-emerald-200/20 rounded-bl-[100px] -z-10"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#91BE1F] rounded-bl-[100px] -z-10"></div>
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-green-100/20 to-emerald-200/20 rounded-tr-[100px] -z-10"></div>
 
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex-1">
-                    <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 via-green-800 to-gray-900 bg-clip-text text-transparent group-hover:text-green-700 transition-colors duration-300">
+                    <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gray-900 via-green-800 to-gray-900 bg-clip-text text-transparent group-hover:text-[#91BE1F] transition-colors duration-300">
                       {service.title}
                     </h3>
                   </div>
                   <button
                     onClick={() => toggleService(service.id)}
-                    className={`ml-4 p-2.5 rounded-xl transition-all duration-300 ${expandedServices.includes(service.id)
+                    className={`ml-9 p-2.5 rounded-xl transition-all duration-300 ${expandedServices.includes(service.id)
                       ? 'bg-green-100 text-green-700 rotate-180'
                       : 'bg-gray-50 text-gray-500 hover:bg-green-50 hover:text-green-600'
                       }`}
                   >
-                    <ChevronDown className="h-6 w-6" />
+                    <ChevronDown className="h-5 w-5" />
                   </button>
                 </div>
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">{service.description}</p>
@@ -158,7 +158,7 @@ const ServiceSection: React.FC = () => {
                       <li key={item.id} className="transform transition-all duration-300 hover:translate-x-2">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-green-100 to-emerald-100 text-green-600 flex items-center justify-center">
-                            <div className="w-3 h-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg transform transition-transform group-hover:scale-110"></div>
+                            <div className="w-3 h-3 bg-gradient-to-br from-[#91BE1F] to-[#7ea81a] rounded-lg transform transition-transform group-hover:scale-110"></div>
                           </div>
                           <div className="flex-grow">
                             <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>

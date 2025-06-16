@@ -28,7 +28,7 @@ const MobileMenu: React.FC<{
       <div className="px-4 pt-2 pb-3 space-y-1">
         <Link
           to="/"
-          className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-600 rounded-lg transition-colors duration-300"
+          className="block px-3 py-2 text-base font-medium text-gray-900 rounded-lg transition-colors duration-300 hover:text-[#91BE1F]"
           onClick={onClose}
         >
           Home
@@ -56,14 +56,14 @@ const MobileMenu: React.FC<{
           href="https://bambuup.com/en/about#our_story"
           target="_blank"
           rel="noopener noreferrer"
-          className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-600 rounded-lg transition-colors duration-300"
+          className="block px-3 py-2 text-base font-medium text-gray-900 rounded-lg transition-colors duration-300 hover:text-[#91BE1F]"
           onClick={onClose}
         >
           About Us
         </a>
         <Link
           to="/contact"
-          className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-green-600 rounded-lg transition-colors duration-300"
+          className="block px-3 py-2 text-base font-medium text-gray-900 rounded-lg transition-colors duration-300 hover:text-[#91BE1F]"
           onClick={onClose}
         >
           Contact
@@ -71,7 +71,7 @@ const MobileMenu: React.FC<{
         <div className="pt-2">
           <Link
             to="/book"
-            className="block w-full text-center bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/20"
+            className="block w-full text-center bg-[#91BE1F] hover:bg-[#7ea81a] text-white px-5 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/20"
             onClick={onClose}
           >
             Book now
@@ -160,19 +160,19 @@ const Header: React.FC = () => {
             <nav className="flex items-center space-x-6">
               <Link
                 to="/"
-                className={`font-medium ${isScrolled
-                  ? 'text-gray-800 hover:text-green-600'
-                  : 'text-gray-800 hover:text-green-600'
-                  } transition-colors duration-300`}
+                className={`font-medium px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
+                  ? 'text-gray-800 hover:text-[#91BE1F]'
+                  : 'text-gray-800 hover:text-[#91BE1F]'
+                  }`}
               >
                 Home
               </Link>
               <div className="relative group">
                 <button
-                  className={`flex items-center font-medium ${isScrolled
-                    ? 'text-gray-800 hover:text-green-600'
-                    : 'text-gray-800 hover:text-green-600'
-                    } transition-colors duration-300`}
+                  className={`flex items-center font-medium px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
+                    ? 'text-gray-800  hover:text-[#91BE1F]'
+                    : 'text-gray-800  hover:text-[#91BE1F]'
+                    }`}
                 >
                   Services <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
@@ -199,19 +199,19 @@ const Header: React.FC = () => {
                 href="https://bambuup.com/en/about#our_story"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`font-medium ${isScrolled
-                  ? 'text-gray-800 hover:text-green-600'
-                  : 'text-gray-800 hover:text-green-600'
-                  } transition-colors duration-300`}
+                className={`font-medium px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
+                  ? 'text-gray-800 hover:text-[#91BE1F]'
+                  : 'text-gray-800 hover:text-[#91BE1F]'
+                  }`}
               >
                 About Us
               </a>
               <Link
                 to="/contact"
-                className={`font-medium ${isScrolled
-                  ? 'text-gray-800 hover:text-green-600'
-                  : 'text-gray-800 hover:text-green-600'
-                  } transition-colors duration-300`}
+                className={`font-medium px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
+                  ? 'text-gray-800 hover:text-[#91BE1F]'
+                  : 'text-gray-800 hover:text-[#91BE1F]'
+                  }`}
               >
                 Contact
               </Link>
@@ -219,8 +219,8 @@ const Header: React.FC = () => {
             <Link
               to="/book"
               className={`px-5 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${isScrolled
-                ? 'bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-green-500/20'
-                : 'bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white border border-white/20'
+                ? 'bg-[#91BE1F] hover:bg-[#7ea81a] text-white shadow-lg hover:shadow-green-500/20'
+                : 'bg-[#91BE1F] hover:bg-[#7ea81a] text-white border border-white/20'
                 }`}
             >
               Book now

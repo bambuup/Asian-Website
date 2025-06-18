@@ -10,7 +10,10 @@ import silicon from "./silicon.jpg";
 import thinkzone from "./thinkzone.png";
 import ueh from "./ueh.png";
 import vecom from "./vecom.jpg";
-import hangpham from "./hangpham.webp"
+import flag from "./flag.png"
+import vaughan from "./vaughan.png"
+import quynh from "./quynh.jpg"
+import regan from "./regan.jpg"
 
 const images = {
   logo,
@@ -25,7 +28,10 @@ const images = {
   thinkzone,
   ueh,
   vecom,
-  hangpham
+  flag,
+  vaughan,
+  quynh,
+  regan
 };
 
 export default images;

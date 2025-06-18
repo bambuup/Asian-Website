@@ -5,6 +5,7 @@ import PartnersSection from '../components/PartnersSection';
 import CTASection from '../components/CTASection';
 import ImpactSection from '../components/ImpactSection';
 import { Helmet } from 'react-helmet';
+import MarketExpertsSection from '../components/MarketExpertsSection';
 
 const HomePage: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
         <Hero />
         <ImpactSection />
         <ServiceSection />
+        <MarketExpertsSection />
         <PartnersSection />
         <CTASection />
       </div>

@@ -15,3 +15,7 @@
 .animate-shimmer {
   animation: shimmer 2s infinite;
 }
+
+:root {
+  --swiper-theme-color: #91BE1F;
+}

@@ -64,8 +64,6 @@ const Hero: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
             Your trusted partner for business success in Vietnam and Australia from market entry to expansion and beyond.
           </p>
-
-
         </div>
 
         {/* Video section with glass morphism effect */}

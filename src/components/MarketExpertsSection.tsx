@@ -21,11 +21,11 @@ const MarketExpertsSection: React.FC = () => {
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
-            spaceBetween={55}
+            spaceBetween={60}
             slidesPerView={2}
             breakpoints={{
               0: { slidesPerView: 1, spaceBetween: 16 },
-              768: { slidesPerView: 2, spaceBetween: 30 },
+              768: { slidesPerView: 2, spaceBetween: 50 },
             }}
             className="max-w-8xl mx-auto px-4 md:px-12"
           >

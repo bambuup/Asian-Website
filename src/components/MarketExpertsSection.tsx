@@ -36,7 +36,7 @@ const MarketExpertsSection: React.FC = () => {
                     <img
                       src={expert.flag}
                       alt="Vietnam flag"
-                      className="w-8 h-8 rounded-full absolute top-4 right-4 m-2 md:block hidden"
+                      className="w-8 h-8 rounded-full m-2 absolute right-4 top-4 md:static md:right-auto md:top-auto"
                     />
                     <img
                       src={expert.image}

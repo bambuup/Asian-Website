@@ -21,7 +21,7 @@ function App() {
                   <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/Asian-Website/input" element={<InputSection />} />
+                    <Route path="/input" element={<InputSection />} />
                   </Routes>
                 </main>
                 <Footer />

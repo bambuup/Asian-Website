@@ -83,7 +83,7 @@ const CTASection: React.FC = () => {
                   <ChevronRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </motion.a>
                 <motion.a
-                  href="/input"
+                  href="/Asian-Website/input"
                   className="group px-8 py-4 bg-white text-gray-800 rounded-full text-lg font-medium transition-all duration-300 flex items-center justify-center hover:bg-gray-50 shadow-lg hover:shadow-xl border border-gray-200 hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

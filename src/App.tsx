@@ -5,8 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import About from './pages/AboutPage';
-import Input from './pages/InputPage';
-
+import InputSection from './components/InputSection';
 function App() {
   return (
     <Router>
@@ -22,7 +21,7 @@ function App() {
                   <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/input" element={<Input />} />
+                    <Route path="/Asian-Website/input" element={<InputSection />} />
                   </Routes>
                 </main>
                 <Footer />

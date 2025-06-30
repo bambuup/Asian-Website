@@ -2,7 +2,7 @@ import React from 'react';
 import InputSection from '../components/InputSection';
 import { Helmet } from 'react-helmet';
 
-const About: React.FC = () => {
+const Input: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -15,4 +15,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Input;

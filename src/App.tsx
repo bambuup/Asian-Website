@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import About from './pages/AboutPage';
-import InputSection from './components/InputSection';
+import Input from './pages/InputPage';
 function App() {
   return (
     <Router>
@@ -21,7 +21,7 @@ function App() {
                   <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/input" element={<InputSection />} />
+                    <Route path="/input" element={<Input />} />
                   </Routes>
                 </main>
                 <Footer />

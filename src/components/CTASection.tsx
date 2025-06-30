@@ -43,19 +43,19 @@ const CTASection: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Expand Your Business in{' '}
-                <motion.span
-                  className="inline-block"
+                <motion.div
+                  className="mt-4 flex items-center justify-center gap-4 flex-wrap"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <span className="bg-gradient-to-r from-red-500 via-red-400 to-yellow-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-500 via-red-400 to-yellow-500 bg-clip-text text-transparent inline-block transform hover:scale-105 transition-transform duration-300 text-5xl md:text-6xl lg:text-7xl font-extrabold">
                     Vietnam
                   </span>
-                  <span className="text-gray-900 mx-2">&</span>
-                  <span className="bg-gradient-to-r from-blue-500 via-teal-400 to-green-500 bg-clip-text text-transparent">
+                  <span className="text-[#1a1a1a] mx-2">&</span>
+                  <span className="bg-gradient-to-r from-blue-500 via-teal-400 to-green-500 bg-clip-text text-transparent inline-block transform hover:scale-105 transition-transform duration-300 text-5xl md:text-6xl lg:text-7xl font-extrabold">
                     Australia
                   </span>
-                </motion.span>
+                </motion.div>
               </motion.h2>
 
               <motion.p

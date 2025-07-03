@@ -74,7 +74,9 @@ const CTASection: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <motion.a
-                  href="/book"
+                  href="https://calendly.com/vaughan-ryan-bambuup/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group px-8 py-4 bg-[#91BE1F] hover:bg-[#7ea81a] text-white rounded-full text-lg font-medium transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-green-500/20 hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

@@ -124,21 +124,11 @@ const Footer: React.FC = () => {
                   News
                 </a>
               </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-gray-600 hover:text-green-600 transition-colors duration-300 flex items-center"
-                >
-                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
-                  Contact Us
-                </Link>
-              </li>
-
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div id="contact">
             <h3 className="text-lg font-semibold text-gray-900 mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">

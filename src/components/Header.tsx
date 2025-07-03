@@ -69,13 +69,15 @@ const MobileMenu: React.FC<{
           Contact
         </Link>
         <div className="pt-2">
-          <Link
-            to="/book"
+          <a
+            href="https://calendly.com/vaughan-ryan-bambuup/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block w-full text-center bg-[#91BE1F] hover:bg-[#7ea81a] text-white px-5 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/20"
             onClick={onClose}
           >
             Book now
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -207,24 +209,42 @@ const Header: React.FC = () => {
                 About Us
               </a>
               <Link
-                to="/contact"
+                to="/#contact"
                 className={`font-medium px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
                   ? 'text-gray-800 hover:text-[#91BE1F]'
                   : 'text-gray-800 hover:text-[#91BE1F]'
                   }`}
+                onClick={e => {
+                  e.preventDefault();
+                  const goToContact = () => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  };
+                  if (location.pathname !== '/') {
+                    navigate('/', { replace: true });
+                    setTimeout(goToContact, 300);
+                  } else {
+                    goToContact();
+                  }
+                  setIsOpen(false);
+                }}
               >
                 Contact
               </Link>
             </nav>
-            <Link
-              to="/book"
+            <a
+              href="https://calendly.com/vaughan-ryan-bambuup/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`px-5 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${isScrolled
                 ? 'bg-[#91BE1F] hover:bg-[#7ea81a] text-white shadow-lg hover:shadow-green-500/20'
                 : 'bg-[#91BE1F] hover:bg-[#7ea81a] text-white border border-white/20'
                 }`}
             >
               Book now
-            </Link>
+            </a>
           </div>
 
           <button
@@ -249,7 +269,4 @@ const Header: React.FC = () => {
   );
 };
 
-// Memoize the entire Header component
 export default React.memo(Header);
-
-// https://calendly.com/capital-bambuup/30min?
